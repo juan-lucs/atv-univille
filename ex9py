@@ -1,0 +1,12 @@
+import math
+
+raio = float(input("raio do cilindro: "))
+altura = float(input("cilindro: "))
+
+area = 2 * 3.14 * raio ** 2 + 2 * 3.14 * raio * altura
+litros = area / 3
+latas = math.ceil(litros / 5)
+custo = latas * 20
+
+print("Latas necessárias:", latas)
+print("Custo total: R$", custo)

@@ -1,0 +1,22 @@
+
+def solicitar_idade():
+    try:
+        idade = int(input("Digite seu idade: "))
+
+        if idade <= 0 or idade >= 120:
+            raise ValueError("0 a 120 anos")
+
+        return idade
+
+    except ValueError:
+        raise ValueError("DIGITE UM NÚMERO VÁLIDO SEU IMBECIL")
+
+
+if __name__ == '__main__':
+    while True:
+        try:
+            idade = solicitar_idade()
+            print(f"Idade : {idade}")
+            break
+        except ValueError as e:
+            print(str(e))
